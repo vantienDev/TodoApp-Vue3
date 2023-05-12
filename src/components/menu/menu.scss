@@ -1,0 +1,88 @@
+@import '../../assets/globalStyle.scss';
+
+  .menu_wrapper {
+    padding: 10px;
+    background-color: $primary-bg-color;
+    border-radius: 15px 0 0 15px;
+    height: 100%;
+
+    .menu_icon_toggle {
+      height: 32px;
+
+      .icon_toggle {
+        height: inherit;
+        border: 0;
+        border-radius: 5px;
+        background-color: $primary-bg-color;
+        padding: 0 4px 0 4px;
+        font-size: 2.3rem;
+        line-height: 15px;
+      }
+
+      .icon_toggle:hover {
+        background-color: rgb(46, 52, 54, 0.4);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .menu_header {
+    margin-bottom: 20px;
+    width: 100%;
+
+    .menu_tilte {
+      @include d-flex(space-between, center);
+      max-height: 32px;
+      margin-bottom: 1.5rem;
+
+      .menu_tilte_text {
+        font-size: 1.7rem;
+        font-weight: bold;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+
+    .search {
+      box-sizing: border-box;
+      width: 100%;
+      border: 0;
+      height: 26px;
+      padding: 4px;
+      background-color: $primary-bg-color;
+      font-size: 1rem;
+      @include bb(1px, solid, $bg-color-hover);
+    }
+
+    .search:focus {
+      outline: none;
+    }
+  }
+
+  .tasks, .list {
+    margin-bottom: 30px;
+
+    .tasks_title, .list_title {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .tasks_actions, .list_actions {
+      padding-left: 15px;
+
+      .action_btn {
+        @include style-btn;
+        @include d-flex(space-between, center);
+        @include bb(1px, solid, $bg-color-hover);
+        width: 100%;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+        padding: 0 0 4px 0;
+      }
+      
+      .action_btn:hover {
+        cursor: pointer;
+      }
+    }
+  }
